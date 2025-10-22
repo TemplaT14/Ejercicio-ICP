@@ -1,3 +1,5 @@
-# Ejercicio-ICP
-Ejercicio con formularios , electron, bootstarp, ICP
-Falta la carpeta node_modules
+# Ejercicio-IPC
+
+Ejercicio con formularios , electron, bootstarp, IPC
+Falta la carpeta node\_modules
+
