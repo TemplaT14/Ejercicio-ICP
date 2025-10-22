@@ -1,14 +1,15 @@
 const registerButton = document.getElementById('register2');
 const userInput = document.getElementById('userReg');
-console.log(registerButton);
-registerButton.addEventListener('click', () => {
-  const name = userInput.value;
-  console.log(name);
-  if (!name) return;
 
-  // Envía el nombre al proceso principal
-  window.electronAPI.writeName(name);
+registerButton.addEventListener('click', () => {
+  const username = userInput.value.trim();
+  if (!username) return;
+
+  // Enviar nombre al main
+  window.electronAPI.writeName(username);
 
   alert('Usuario registrado correctamente');
-  window.close(); // opcional: cierra la ventana de registro
+
+  // Cierra la ventana de registro (opcional)
+  window.close();
 });

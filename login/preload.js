@@ -4,5 +4,7 @@ const { contextBridge, ipcRenderer } = require('electron')
 contextBridge.exposeInMainWorld('electronAPI', {
   openRegister: () => ipcRenderer.send('open-register'),
   // Escucha desde el login
-  onFillLogin: (callback) => ipcRenderer.on('fill-login', (event, name) => callback(name))
+  onFillLogin: (callback) => ipcRenderer.on('fill-login', (event, username) => callback(username))
 })
+
+

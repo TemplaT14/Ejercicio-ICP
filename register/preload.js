@@ -1,8 +1,6 @@
-
 const { contextBridge, ipcRenderer } = require('electron');
 
 contextBridge.exposeInMainWorld('electronAPI', {
-  // Envía el nombre al main
-  writeName: (name) => ipcRenderer.send('write-name', name),
-
+  // Envía el nombre de usuario al main
+  writeName: (username) => ipcRenderer.send('write-name', username)
 });

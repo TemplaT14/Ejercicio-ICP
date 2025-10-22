@@ -6,7 +6,10 @@ registerButton.addEventListener('click', () => {
 
 const userLoginInput = document.getElementById('userIni');
 
-window.electronAPI.onFillLogin((name) => {
-  userLoginInput.value = name;
+// Recibir nombre desde el main y asignarlo al input
+window.electronAPI.onFillLogin((username) => {
+  userLoginInput.value = username;
   alert('Usuario registrado correctamente');
 });
+
+
