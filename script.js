@@ -19,4 +19,4 @@ if (passToggle) {
     if (passInput) passInput.type = e.target.checked ? "text" : "password";
   });
 }
-//Mensaje de aviso de registo exitoso
+

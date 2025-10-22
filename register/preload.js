@@ -1,6 +1,6 @@
+// Módulo necesario de Electron
 const { contextBridge, ipcRenderer } = require('electron');
-
+// enviar el nombre de usuario al main
 contextBridge.exposeInMainWorld('electronAPI', {
-  // Envía el nombre de usuario al main
   writeName: (username) => ipcRenderer.send('write-name', username)
 });
